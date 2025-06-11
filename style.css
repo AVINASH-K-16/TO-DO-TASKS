@@ -5,39 +5,7 @@ body {
   display: flex;
   justify-content: center;
 }
-.navbar {
-  background-color: #ee5f42;
-  height: 100px;
-  width: 100%;
-  position: fixed;
-  margin-top: -28px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  h3 {
-    font-size: 30px;
-    margin-left: 20px;
-  }
 }
-.add {
-  background-color: #0aeef6;
-  padding: 10px 20px;
-  height: 40px;
-  width: 8%;
-  margin-right: 25px;
-  text-align: center;
-  border: none;
-  border-radius: 8px;
-  font-size: 14px;
-}
-.add:hover {
-  background-color: #e111ad;
-  transition: cubic-bezier(0.39, 0.575, 0.565, 1);
-  border-color: black;
-  outline: 2px solid black;
-  outline-offset: -2px;
-}
-
 .container {
   width: 100%;
   height: 300px;
