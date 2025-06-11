@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h3>Task Manager</h3>
+      <button class="add">Add Task</button>
+    </nav>
+    <div class="container"> 
+      <h1>Task Manager</h1>
+
+      <div class="task-form">
+        <input type="text" id="taskInput" placeholder="Enter a task" />
+        <input type="date" id="dueDateInput" />
+        <select id="priorityInput">
+          <option value="Low">Low</option>
+          <option value="Medium" selected>Medium</option>
+          <option value="High">High</option>
+        </select>
+        <select id="statusInput">
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+        <button onclick="addTask()">Add</button>
+      </div>
+
+      <div class="controls">
+        <input
+          type="text"
+          id="searchInput"
+          onkeyup="searchTask()"
+          placeholder="Search tasks..."
+        />
+        <select id="filterStatus" onchange="renderTasks()">
+          <option value="All">All</option>
+          <option value="Pending">Pending</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+        <select id="sortBy" onchange="renderTasks()">
+          <option value="created">Sort by Created</option>
+          <option value="dueDate">Sort by Due Date</option>
+          <option value="priority">Sort by Priority</option>
+        </select>
+      </div>
+
+      <ul id="taskList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
